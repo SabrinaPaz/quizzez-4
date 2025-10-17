@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Português e Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="intro-container">
+        <h1>Bem-vindo ao Questionário!</h1>
+        <p>Por favor, insira seu nome para começar:</p>
+        <input type="text" id="student-name" placeholder="Digite seu nome">
+        <button onclick="startQuiz()">Começar</button>
+    </div>
+
+    <div class="container" id="quiz-container" style="display:none;">
+        <h2 id="question-title">Pergunta 1</h2>
+        <p id="question-text">Qual é a capital do Brasil?</p>
+        <ul id="options">
+            <li onclick="checkAnswer(1)">São Paulo</li>
+            <li onclick="checkAnswer(2)">Rio de Janeiro</li>
+            <li onclick="checkAnswer(3)">Brasília</li>
+            <li onclick="checkAnswer(4)">Salvador</li>
+        </ul>
+        <button id="next-button" onclick="nextQuestion()" style="display:none;">Próxima Pergunta</button>
+        <div id="score"></div>
+    </div>
+
+    <div id="confetti"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
